@@ -19,7 +19,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - GitHub: [@githubhandle](https://github.com/mwenyoa)
 - Twitter: [@twitterhandle](https://twitter.com/anthony_mwenyo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/anthony-mwenyo/)
-## 🤝 Contributing
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
