@@ -8,3 +8,15 @@ CREATE TABLE animals(id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
             );
 
 ALTER TABLE animals ADD species VARCHAR(100);
+
+/* Add onwer and species table to vet_clinic database. */
+CREATE TABLE owners(
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    full_name VARCHAR(100),
+    age INT
+);
+
+CREATE TABLE species(
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(100)
+);
