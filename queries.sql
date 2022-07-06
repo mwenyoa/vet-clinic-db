@@ -51,3 +51,6 @@ Animal_Escaping_The_Most ORDER BY Max_Escape_Attempts DESC LIMIT 1;
 /* What is the minimum and maximum weight of each type of animal? */
 SELECT MAX(weight_kg) as ANIMAL_MAX_WEIGHT,
 MIN(weight_kg) as ANIMAL_MIN_WEIGHT FROM animals;
+/* */
+SELECT species, AVG(escape_attempts) as AVERAGE_ESCAPE_ATTEMPTS  FROM animals
+WHERE date_of_birth >= '1990-01-01' AND date_of_birth <= '2000-12-31' GROUP BY species;
