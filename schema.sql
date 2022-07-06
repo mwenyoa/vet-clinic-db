@@ -20,3 +20,6 @@ CREATE TABLE species(
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR(100)
 );
+
+ /* remove species column in animals table*/
+ ALTER TABLE animals DROP species;
