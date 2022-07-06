@@ -11,4 +11,9 @@ VALUES('Agumon', 'Feb-03-2020', 0, true,  10.23),
       ('Boarmon', 'Jun-7-2005', 7, true, 20.4),
       ('Blossom', 'Oct-13-1998', 3, true, 17),
       ('Ditto', 'May-14-2022', 4, true, 22);
-     
+      
+/*Insert the following data into the owners table*/
+INSERT INTO owners(full_name, age)
+VALUES('Sam Smith', 34), ('Jennifer Orwell', 19),
+      ('Bob', 45), ('Melody Pond', 77),
+      ('Dean Winchester', 14), ('Jodie Whittaker', 38);
