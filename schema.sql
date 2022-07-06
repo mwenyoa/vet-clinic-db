@@ -23,3 +23,9 @@ CREATE TABLE species(
 
  /* remove species column in animals table*/
  ALTER TABLE animals DROP species;
+
+ /*Add foreign key to animals table from species table*/
+ ALTER TABLE animals ADD species_id INT;
+ ALTER TABLE animals
+ ADD CONSTRAINT species_id
+ FOREIGN KEY(species_id) REFERENCES species(id);
