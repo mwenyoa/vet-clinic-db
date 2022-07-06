@@ -27,7 +27,7 @@ BEGIN;
 DELETE FROM animals;
 ROLLBACK;
 SELECT * FROM animals;
-/* */
+/* Delete animals born after 2022-01-01, create savepoint update weight and commit changes*/
 BEGIN;
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 SAVEPOINT mydata;
