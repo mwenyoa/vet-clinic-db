@@ -4,5 +4,7 @@ CREATE TABLE animals(id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
               date_of_birth DATE,
               escape_attempts INT,
               neutered BOOLEAN,
-              weight_kg DECIMAL
+              weight_kg DECIMAL,
             );
+
+ALTER TABLE animals ADD species VARCHAR(100);
