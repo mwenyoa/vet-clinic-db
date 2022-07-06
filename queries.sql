@@ -14,4 +14,10 @@ BEGIN;
 UPDATE animals SET species = 'unspecified';
 ROLLBACK;
 SELECT * FROM animals;
-
+/*Setting animals species wohse name ending with mon to 
+  digimon and the one's without  species to pokemon  */
+BEGIN;
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species = 'pokemon' WHERE species IS null;
+COMMIT;
+SELECT * FROM animals;
