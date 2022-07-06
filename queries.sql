@@ -39,3 +39,5 @@ COMMIT;
 SELECT * FROM animals;
 /* How many animals are there? */
 SELECT COUNT(*) as total_number_of_naimals FROM animals;
+/*How many animals have never tried to escape?*/
+SELECT COUNT(*) as animals_without_escape_attempts FROM animals WHERE escape_attempts = 0;
