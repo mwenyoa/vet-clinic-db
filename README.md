@@ -1,7 +1,7 @@
 ## Vet-clinic-db
 
 >
-In this project, I used a relational database to create the initial data structure for a vet clinic. I created a table to store animals' information, insert some data into it,  queried and updated animals table using transactions as well as using GROUP BY syntax when querying aggreate date using SQL aggregate functions like AVG, MAX, MIN, e.t.c.
+In this project, I used a relational database to create the initial data structure for a vet clinic. I created a table to store animals' information, insert some data into it,  queried and updated animals table using transactions as well as using GROUP BY syntax when querying aggregate data using SQL aggregate functions like AVG, MAX, MIN, e.t.c.
 
 ## Getting Started
 
