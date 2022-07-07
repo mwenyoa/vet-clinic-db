@@ -43,3 +43,10 @@ CREATE TABLE species(
    age INT,
    date_of_graduation DATE
 );
+
+/* Create specialization table */
+CREATE TABLE specializations(
+    specialty_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    species_id INT REFERENCES species(id),
+    vets_id INT REFERENCES vets(id)
+);
