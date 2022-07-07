@@ -93,3 +93,9 @@ VALUES((SELECT id  FROM animals WHERE name ='Agumon'), (SELECT id FROM vets WHER
        ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), 'Aug-03-2020'),
        ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), 'May-24-2020'),
        ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatcher'), 'Jan-11-2021');
+
+       /*Who was the last animal seen by William Tatcher?*/
+      SELECT vets.name as VET_NAME, animals.name as Animal_Last_Seen,
+      visits.date_of_visit FROM vets JOIN visits ON vets.id = visits.vets_id
+      JOIN animals ON animals.id = visits.animals_id
+      WHERE vets.name ='William Tatcher' ORDER BY visits.date_of_visit DESC LIMIT 1;
