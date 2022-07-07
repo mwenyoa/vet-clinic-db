@@ -37,3 +37,6 @@ UPDATE animals SET species_id = (
 SELECT id FROM species WHERE name ='Pokemon') 
 WHERE name NOT LIKE '%mon';
 SELECT * FROM animals;
+
+/* Sam Smith owns Agumon. */
+UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Sam Smith') WHERE name = 'Agumon';
