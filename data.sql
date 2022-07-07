@@ -62,7 +62,7 @@ VALUES('William Tatcher', 45, 'Apr-23-2000'),
 ('Stephanie Mendez', 64, 'May-4-1981'),
 ('Jack Harkness', 38,'Jun-8-2008');
 
-/* Insert the following data for specialties: */
+/*Project 4: Insert the following data for specialties: */
 INSERT INTO specializations(species_id, vets_id)
 VALUES((SELECT id FROM species WHERE name = 'Pokemon'),
 (SELECT id FROM vets WHERE name = 'William Tatcher')),
