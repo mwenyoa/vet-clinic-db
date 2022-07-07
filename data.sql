@@ -43,3 +43,6 @@ UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Sam Smit
 
 /*Jennifer Orwell owns Gabumon and Pikachu. */
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Jennifer Orwell') WHERE name = 'Gabumon' OR name = 'Pikachu';
+
+/* Bob owns Devimon and Plantmon.*/
+UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Bob') WHERE name = 'Devimon' OR name = 'Plantmon';
