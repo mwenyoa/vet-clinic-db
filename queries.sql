@@ -123,3 +123,8 @@ ORDER BY Animal_Highest_Count DESC LIMIT 1;
   SELECT vets.name as vets_name, species.name as specialization
   from vets LEFT JOIN specializations ON specializations.vets_id = vets.id
   LEFT JOIN  species ON specializations.species_id = species.id;
+
+  --Project 4:  all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.
+  SELECT animals.name as animal_name ,date_of_visit from animals 
+  JOIN visits ON animals.id = visits.animals_id JOIN vets ON vets.id = visits.vets_id
+  WHERE vets.name= 'Stephanie Mendez' AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
