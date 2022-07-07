@@ -35,3 +35,11 @@ CREATE TABLE species(
  ALTER TABLE animals 
  ADD CONSTRAINT owners_id
  FOREIGN KEY(owners_id) REFERENCES owners(id);
+
+ /*Create a table named vets */
+ CREATE TABLE vets(
+   id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+   name VARCHAR(200),
+   age INT,
+   date_of_graduation DATE
+);
