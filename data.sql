@@ -46,3 +46,7 @@ UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Jennifer
 
 /* Bob owns Devimon and Plantmon.*/
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Bob') WHERE name = 'Devimon' OR name = 'Plantmon';
+
+/* Melody Pond owns Charmander, Squirtle, and Blossom.*/
+UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Melody Pond')
+WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
