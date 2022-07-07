@@ -58,3 +58,4 @@ CREATE TABLE visits(
     animals_id INT REFERENCES animals(id),
     vets_id INT REFERENCES vets(id)
 );
+ALTER TABLE visits ADD date_of_visit DATE;
