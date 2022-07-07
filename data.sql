@@ -40,3 +40,6 @@ SELECT * FROM animals;
 
 /* Sam Smith owns Agumon. */
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Sam Smith') WHERE name = 'Agumon';
+
+/*Jennifer Orwell owns Gabumon and Pikachu. */
+UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Jennifer Orwell') WHERE name = 'Gabumon' OR name = 'Pikachu';
