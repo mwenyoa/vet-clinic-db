@@ -128,3 +128,10 @@ ORDER BY Animal_Highest_Count DESC LIMIT 1;
   SELECT animals.name as animal_name ,date_of_visit from animals 
   JOIN visits ON animals.id = visits.animals_id JOIN vets ON vets.id = visits.vets_id
   WHERE vets.name= 'Stephanie Mendez' AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+  --Project 4: What animal has the most visits to vets?.
+    SELECT animals.name as Animal_Name, COUNT(*) as heighest_visit from animals
+    JOIN visits ON visits.animals_id = animals.id
+    GROUP BY animals.name
+    ORDER BY heighest_visit DESC
+    LIMIT 1;
