@@ -118,3 +118,8 @@ ORDER BY Animal_Highest_Count DESC LIMIT 1;
 /*Project 4: How many different animals did Stephanie Mendez see?*/
       SELECT COUNT(*) as count_Animals_seen_by_Stephanie_Mendez from vets JOIN
       visits ON vets.id = visits.vets_id WHERE name='Stephanie Mendez'
+
+--Project 4: List all vets and their specialties, including vets with no specialties.
+  SELECT vets.name as vets_name, species.name as specialization
+  from vets LEFT JOIN specializations ON specializations.vets_id = vets.id
+  LEFT JOIN  species ON specializations.species_id = species.id;
