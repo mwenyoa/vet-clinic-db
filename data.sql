@@ -54,3 +54,10 @@ WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
 /* Dean Winchester owns Angemon and Boarmon. */
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE full_name ='Dean Winchester') WHERE name = 'Angemon' OR name = 'Boarmon';
 SELECT * FROM animals;
+
+/*Project 4:  Insert the following data for vets: */
+INSERT INTO vets(name, age, date_of_graduation)
+VALUES('William Tatcher', 45, 'Apr-23-2000'),
+('Maisy Smith', 26, 'Jan-17-2019'),
+('Stephanie Mendez', 64, 'May-4-1981'),
+('Jack Harkness', 38,'Jun-8-2008');
