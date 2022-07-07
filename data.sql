@@ -30,3 +30,10 @@ UPDATE animals SET species_id = (
 SELECT id FROM species WHERE name ='Digimon') 
 WHERE name LIKE '%mon';
 SELECT * FROM animals;
+
+/* Modify your inserted animals so it includes the species_id value:
+All other animals are Pokemon*/
+UPDATE animals SET species_id = (
+SELECT id FROM species WHERE name ='Pokemon') 
+WHERE name NOT LIKE '%mon';
+SELECT * FROM animals;
