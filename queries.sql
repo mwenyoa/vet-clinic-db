@@ -62,3 +62,10 @@ the following questions*/
  SELECT animals.name as Animal_Name, owners.full_name as Animal_Owner
  FROM animals INNER JOIN owners ON animals.owners_id = owners.id
  WHERE owners.full_name ='Melody Pond';
+
+ /* Query 2: List of all animals that are pokemon (their type is Pokemon).*/
+SELECT animals.name as Animal_Name, 
+species.name as Animal_Species
+FROM animals INNER JOIN 
+species ON animals.species_id = species.id
+WHERE species.name = 'Pokemon';
