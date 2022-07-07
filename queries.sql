@@ -135,3 +135,9 @@ ORDER BY Animal_Highest_Count DESC LIMIT 1;
     GROUP BY animals.name
     ORDER BY heighest_visit DESC
     LIMIT 1;
+
+    --Project 4: Who was Maisy Smith's first visit?
+      SELECT vets.name, animals.name, date_of_visit FROM vets
+      JOIN visits ON vets.id=visits.vets_id
+      JOIN animals ON animals.id= visits.animals_id 
+      WHERE vets.name ='Maisy Smith' ORDER BY visits.date_of_visit ASC LIMIT 1;
