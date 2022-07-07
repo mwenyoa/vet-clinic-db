@@ -151,3 +151,21 @@ ORDER BY Animal_Highest_Count DESC LIMIT 1;
         JOIN vets ON vets.id = visits.vets_id
         ORDER BY date_of_visit DESC
         LIMIT 1;
+
+      --Project 4: How many visits were with a vet that did not specialize in that animal's species?
+        SELECT COUNT(*) as Count_visits_with_vet_without_specialization
+        FROM visits
+        JOIN animals ON animals.id = visits.animals_id
+        JOIN vets ON vets.id = visits.vets_id
+        JOIN specializations ON specializations.vets_id = visits.vets_id
+        WHERE animals.species_id != specializations.species_id;
+
+      --Project 4: What specialty should Maisy Smith consider getting? Look for the species she gets the most.
+        SELECT species.name as specialization , COUNT(visits.animals_id) from visits
+        JOIN vets ON vets.id = visits.vets_id
+        JOIN animals ON animals.id = visits.animals_id
+        JOIN species ON species.id = animals.species_id
+        WHERE vets.name = 'Maisy Smith'
+        GROUP BY species.name
+        ORDER BY species.name DESC 
+        LIMIT 1;
