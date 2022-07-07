@@ -54,3 +54,11 @@ MIN(weight_kg) as ANIMAL_MIN_WEIGHT FROM animals GROUP BY species;
 /* */
 SELECT species, AVG(escape_attempts) as AVERAGE_ESCAPE_ATTEMPTS  FROM animals
 WHERE date_of_birth >= '1990-01-01' AND date_of_birth <= '2000-12-31' GROUP BY species;
+
+/* Write queries (using JOIN) to answer 
+the following questions*/
+
+/* Query 1: What animals belong to Melody Pond?*/
+ SELECT animals.name as Animal_Name, owners.full_name as Animal_Owner
+ FROM animals INNER JOIN owners ON animals.owners_id = owners.id
+ WHERE owners.full_name ='Melody Pond';
