@@ -141,3 +141,13 @@ ORDER BY Animal_Highest_Count DESC LIMIT 1;
       JOIN visits ON vets.id=visits.vets_id
       JOIN animals ON animals.id= visits.animals_id 
       WHERE vets.name ='Maisy Smith' ORDER BY visits.date_of_visit ASC LIMIT 1;
+
+      --Project 4: Details for most recent visit: animal information, vet information, and date of visit.
+        SELECT date_of_visit as Most_Recent_visit, 
+            animals.date_of_birth as animal_dob, animals.escape_attempts,
+          animals.neutered as neutered_status, animals.weight_kg as animal_weight,
+          vets.name as vet_name, vets.age as vet_age, vets.date_of_graduation
+        FROM visits JOIN animals ON animals.id = visits.animals_id
+        JOIN vets ON vets.id = visits.vets_id
+        ORDER BY date_of_visit DESC
+        LIMIT 1;
