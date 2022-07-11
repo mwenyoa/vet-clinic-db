@@ -62,3 +62,6 @@ ALTER TABLE visits ADD date_of_visit DATE;
 
 -- Add an email column to your owners table
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Add animals_id index to visits table
+CREATE INDEX visits_animals_id_asc ON visits(animals_id ASC);
