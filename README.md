@@ -20,7 +20,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@twitterhandle](https://twitter.com/anthony_mwenyo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/anthony-mwenyo/)
 
-👤 ** Gedeon Ushindi **
+👤 **Gedeon Ushindi**
 
 - GitHub: [@GedeonTS](https://github.com/GedeonTS)
 - Twitter: [@Gedeon191](https://twitter.com/Gedeon191)
