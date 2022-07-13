@@ -2,6 +2,11 @@
 
 >In this project, I used a relational database to create the initial data structure for a vet clinic. I created a table to store animals' information, insert some data into it,  queried and updated animals table using transactions as well as using GROUP BY syntax when querying aggregate data using SQL aggregate functions like AVG, MAX, MIN, COUNT e.t.c. I Used primary key & foreign key mechanism for joining tables, Queried multiple tables and prepared complex queries that answered analytical questions. Additionally I implemented many-to-many relation between
 relations and added database performance audit queries.
+
+### Vet Clinic Database Schema
+> ![vet_clinic_schema](https://user-images.githubusercontent.com/28694196/178628667-d4aa45bf-619d-4691-a238-fce38d5e3b6c.png)
+
+
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
